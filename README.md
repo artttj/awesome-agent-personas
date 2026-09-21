@@ -22,6 +22,11 @@ The focus is on **interesting techniques and real implementations**, not giant d
 ## 🧭 Contents
 
 - [Start Here](#-start-here)
+- [Highlighted Personas](#-highlighted-personas)
+  - [Writers](#-writers)
+  - [Directors](#-directors)
+  - [Fictional Characters](#-fictional-characters)
+  - [Multi-Persona Experiments](#-multi-persona-experiments)
 - [What Is an Agent Persona?](#-what-is-an-agent-persona)
 - [SOUL.md and Agent Identity](#-soulmd-and-agent-identity)
 - [Persona Distillation](#-persona-distillation)
@@ -32,6 +37,7 @@ The focus is on **interesting techniques and real implementations**, not giant d
 - [Specifications and Tooling](#-specifications-and-tooling)
 - [Collections](#-collections)
 - [Design Patterns](#-design-patterns)
+- [Resources](#-resources)
 - [Contributing](#-contributing)
 
 ---
@@ -65,6 +71,62 @@ Uses different personas as **cognitive perspectives inside a multi-agent system*
 Personas can debate, vote, review ideas, or approach the same problem using different mental models.
 
 🔗 https://github.com/momozi1996/DirectorAgents
+
+---
+
+
+# 🌟 Highlighted Personas
+
+Want to see the actual personas before reading about the frameworks? Start here.
+
+These are concrete persona files and packs hidden inside some of the larger projects above.
+
+## ✍️ Writers
+
+| Persona | What is modeled | Direct link |
+|---|---|---|
+| **Liu Cixin** | Hard science fiction, civilization-scale thinking, scientific concepts turned into social conflict, and large-scale speculative reasoning. | [Open persona](https://github.com/momozi1996/awesome-ai-persona-skills/blob/main/Novelists/liucixin-skill/SKILL.md) |
+| **Yu Hua** | Plain language around heavy themes, suffering, restrained warmth, folk perspective, and narrative repetition. | [Open persona](https://github.com/momozi1996/awesome-ai-persona-skills/blob/main/Novelists/yuhua-skill/SKILL.md) |
+| **Mo Yan** | Magical realism, sensory-heavy narration, rural storytelling, multiple viewpoints, and historical layering. | [Open persona](https://github.com/momozi1996/awesome-ai-persona-skills/blob/main/Novelists/moyan-skill/SKILL.md) |
+| **Eileen Chang** | Urban psychological realism, material detail, emotional distance, contrast, and melancholy. | [Open persona](https://github.com/momozi1996/awesome-ai-persona-skills/blob/main/Novelists/zhangailing-skill/SKILL.md) |
+
+**Why this set is interesting:** these are not simple biography prompts. Each skill attempts to turn recurring creative choices into reusable writing and reasoning patterns.
+
+## 🎬 Directors
+
+| Persona | What is modeled | Direct link |
+|---|---|---|
+| **Christopher Nolan** | Nonlinear structure, high-concept storytelling, time, science, and philosophical framing. | [Open persona](https://github.com/momozi1996/DirectorAgents/blob/main/skills/christophernolan-perspective/SKILL.md) |
+| **Quentin Tarantino** | Dialogue-driven scenes, genre collision, nonlinear storytelling, and heightened dramatic tension. | [Open persona](https://github.com/momozi1996/DirectorAgents/blob/main/skills/quentintarantino-perspective/SKILL.md) |
+| **Hayao Miyazaki** | Hand-crafted visual thinking, childhood perspective, flight, nature, environmental themes, and emotional wonder. | [Open persona](https://github.com/momozi1996/DirectorAgents/blob/main/skills/hayaomiyazaki-perspective/SKILL.md) |
+| **Ang Lee** | Cross-cultural storytelling, ethical tension, emotional restraint, and competing interpretations of the same event. | [Open persona](https://github.com/momozi1996/DirectorAgents/blob/main/skills/anglee-perspective/SKILL.md) |
+
+The interesting part is not impersonation. These personas are used as **creative lenses** that can be combined in sequential chains, debates, voting, or expert panels.
+
+## 🎭 Fictional Characters
+
+The [Arknights Persona Distillation](https://github.com/JNGKZbird/Arknights-Persona-Distill) project is useful because every character is built from source material into structured persona packs with motivations, boundaries, behavior, speech, relationships, memories, and worldview.
+
+| Persona | Why it is interesting | Direct link |
+|---|---|---|
+| **Amiya** | A leader persona with responsibility, empathy, internal conflict, and strong role boundaries. | [Open persona](https://github.com/JNGKZbird/Arknights-Persona-Distill/tree/main/amiya) |
+| **Texas** | A restrained, quiet persona where consistency depends heavily on what the agent does *not* say. | [Open persona](https://github.com/JNGKZbird/Arknights-Persona-Distill/tree/main/texas-base) |
+| **Lappland** | A deliberately unstable and intense character, useful for testing whether strong personalities remain coherent without becoming random. | [Open persona](https://github.com/JNGKZbird/Arknights-Persona-Distill/tree/main/lappland-base) |
+| **Closure** | An engineer and hacker character with a strong professional role layered together with a distinctive personality. | [Open persona](https://github.com/JNGKZbird/Arknights-Persona-Distill/tree/main/closure) |
+| **Theresa** | A leadership-focused persona built around history, relationships, political responsibility, and memory anchors. | [Open persona](https://github.com/JNGKZbird/Arknights-Persona-Distill/tree/main/theresa) |
+
+The project also ships both **full** and **compact** persona bundles, which makes it useful for comparing how much identity survives prompt compression.
+
+## 👥 Multi-Persona Experiments
+
+Some of the most interesting examples are not single personas at all.
+
+- **Texas vs. Lappland**: two-way roleplay packs model both the active persona and its relationship with the other character. [Open the pack](https://github.com/JNGKZbird/Arknights-Persona-Distill/tree/main/texas-lappland)
+- **Lappland vs. Texas**: the same relationship with the roles reversed, useful for studying asymmetric perspective. [Open the pack](https://github.com/JNGKZbird/Arknights-Persona-Distill/tree/main/lappland-texas)
+- **Two versions of Exusiai in one scene**: one agent response performs two versions of the same character while keeping them distinct. [Open the pack](https://github.com/JNGKZbird/Arknights-Persona-Distill/tree/main/exusiai-duo-doctor)
+- **Director panel**: DirectorAgents can combine multiple creative personas into chains, debates, voting groups, and expert panels instead of using one personality at a time. [Explore DirectorAgents](https://github.com/momozi1996/DirectorAgents)
+
+This is where personas start becoming an **agent architecture primitive**, rather than just a roleplay feature.
 
 ---
 
@@ -733,7 +795,18 @@ This repository intentionally avoids:
 
 ---
 
+# 📚 Resources
+
+- 🤝 [Contribution Guidelines](CONTRIBUTING.md) — what belongs in the list and how to submit it.
+- 🧾 [Pull Request Template](.github/PULL_REQUEST_TEMPLATE.md) — checklist for new entries.
+- 💬 [Issues](https://github.com/artttj/awesome-agent-personas/issues) — suggest a persona, report a broken link, or discuss the list.
+- 🌟 [Awesome Manifesto](https://github.com/sindresorhus/awesome/blob/main/awesome.md) — background on the broader awesome-list convention.
+
+---
+
 # 🤝 Contributing
+
+Please read the [Contribution Guidelines](CONTRIBUTING.md) before opening a pull request.
 
 Found something unusual?
 
